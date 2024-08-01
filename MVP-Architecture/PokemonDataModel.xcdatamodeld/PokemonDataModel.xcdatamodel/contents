@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23211.1" systemVersion="24A5298h" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="PokemonDetail" representedClassName="PokemonDetail" syncable="YES" codeGenerationType="class">
+        <attribute name="height" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="weight" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="sprites" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Sprite" inverseName="pokeDetail" inverseEntity="Sprite"/>
+    </entity>
+    <entity name="Sprite" representedClassName="Sprite" syncable="YES" codeGenerationType="class">
+        <attribute name="frontDefault" optional="YES" attributeType="String"/>
+        <relationship name="pokeDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PokemonDetail" inverseName="sprites" inverseEntity="PokemonDetail"/>
+    </entity>
+</model>
