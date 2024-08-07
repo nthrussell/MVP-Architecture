@@ -34,9 +34,8 @@ class HomeView: UIView {
     
     var fetchMoreData: (() -> Void)?
     var onTap: ((_ url:String) -> Void)?
-
-    var pokemonList: [PokemonList] = [PokemonList]()
-    private(set) var filteredData: [PokemonList] = [PokemonList]()
+    
+    var presenter: HomePresenter!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -69,10 +68,6 @@ class HomeView: UIView {
         ])
     }
     
-    func isFiltering() -> Bool {
-        return filteredData.count > 0
-    }
-    
     func reloadTebleView() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -82,10 +77,10 @@ class HomeView: UIView {
 
 extension HomeView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isFiltering() {
-            return filteredData.count
+        if presenter.isFiltering {
+            return presenter.filteredData.count
         } else {
-            return pokemonList.count
+            return presenter.pokemonList.count
         }
     }
     
@@ -97,14 +92,14 @@ extension HomeView: UITableViewDataSource {
         
         var data: PokemonList
         
-        if isFiltering() {
-            data = filteredData[indexPath.row]
+        if presenter.isFiltering {
+            data = presenter.filteredData[indexPath.row]
             activityindicatorView.stopAnimating()
         } else {
-            data = pokemonList[indexPath.row]
+            data = presenter.pokemonList[indexPath.row]
         }
         
-        if (indexPath.row == pokemonList.count - 1) && (!isFiltering()){
+        if (indexPath.row == presenter.pokemonList.count - 1) && (!presenter.isFiltering){
             tableView.tableFooterView = activityindicatorView
             activityindicatorView.startAnimating()
             if let fetchMoreData = fetchMoreData { fetchMoreData() }
@@ -124,10 +119,10 @@ extension HomeView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var data: PokemonList
         
-        if isFiltering() {
-            data = filteredData[indexPath.row]
+        if presenter.isFiltering {
+            data = presenter.filteredData[indexPath.row]
         } else {
-            data = pokemonList[indexPath.row]
+            data = presenter.pokemonList[indexPath.row]
         }
 
         if let onTap = onTap {
@@ -138,7 +133,7 @@ extension HomeView: UITableViewDelegate {
 
 extension HomeView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange textSearched: String) {
-        filteredData = pokemonList.filter {
+        presenter.filteredData = presenter.pokemonList.filter {
             $0.name.lowercased().contains(textSearched.lowercased().trimmingCharacters(in: .whitespaces))
         }
         reloadTebleView()

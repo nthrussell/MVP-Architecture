@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843E31422C63D4FD007B0157 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E31412C63D4FA007B0157 /* HomePresenter.swift */; };
+		843E31442C63D510007B0157 /* FavouritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E31432C63D509007B0157 /* FavouritePresenter.swift */; };
+		843E31462C63D518007B0157 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E31452C63D514007B0157 /* DetailPresenter.swift */; };
 		84AD00912C5BA8F00037D9A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD008B2C5BA8F00037D9A3 /* AppDelegate.swift */; };
 		84AD00922C5BA8F00037D9A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD008E2C5BA8F00037D9A3 /* SceneDelegate.swift */; };
 		84AD00942C5BA8F00037D9A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84AD008C2C5BA8F00037D9A3 /* Assets.xcassets */; };
@@ -71,6 +74,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		843E31412C63D4FA007B0157 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		843E31432C63D509007B0157 /* FavouritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePresenter.swift; sourceTree = "<group>"; };
+		843E31452C63D514007B0157 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		84AD00562C5BA8160037D9A3 /* MVP-Architecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVP-Architecture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AD006C2C5BA8190037D9A3 /* MVP-ArchitectureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVP-ArchitectureTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AD00762C5BA8190037D9A3 /* MVP-ArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVP-ArchitectureUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,7 +182,7 @@
 				84AD009B2C5BA90A0037D9A3 /* App */,
 				84AD009A2C5BA9050037D9A3 /* Model */,
 				84AD00982C5BA8FE0037D9A3 /* View */,
-				84AD00972C5BA8FB0037D9A3 /* Controller */,
+				84AD00972C5BA8FB0037D9A3 /* Presenter */,
 				84AD008C2C5BA8F00037D9A3 /* Assets.xcassets */,
 				84AD008D2C5BA8F00037D9A3 /* Info.plist */,
 				84AD00D62C5BAC450037D9A3 /* PokemonDataModel.xcdatamodeld */,
@@ -184,14 +190,14 @@
 			path = "MVP-Architecture";
 			sourceTree = "<group>";
 		};
-		84AD00972C5BA8FB0037D9A3 /* Controller */ = {
+		84AD00972C5BA8FB0037D9A3 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				84AD00D42C5BAC010037D9A3 /* HomeViewController.swift */,
-				84AD00D22C5BABE90037D9A3 /* DetailViewController.swift */,
-				84AD00D02C5BABD40037D9A3 /* FavouriteViewController.swift */,
+				843E31412C63D4FA007B0157 /* HomePresenter.swift */,
+				843E31452C63D514007B0157 /* DetailPresenter.swift */,
+				843E31432C63D509007B0157 /* FavouritePresenter.swift */,
 			);
-			path = Controller;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		84AD00982C5BA8FE0037D9A3 /* View */ = {
@@ -294,8 +300,11 @@
 			isa = PBXGroup;
 			children = (
 				84AD00CE2C5BABA20037D9A3 /* HomeView.swift */,
+				84AD00D42C5BAC010037D9A3 /* HomeViewController.swift */,
 				84AD00CC2C5BAB8B0037D9A3 /* DetailView.swift */,
+				84AD00D22C5BABE90037D9A3 /* DetailViewController.swift */,
 				84AD00CA2C5BAB750037D9A3 /* FavouriteView.swift */,
+				84AD00D02C5BABD40037D9A3 /* FavouriteViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -524,6 +533,7 @@
 				84AD00C32C5BAAD30037D9A3 /* PokemonListModel.swift in Sources */,
 				84AD00CF2C5BABA30037D9A3 /* HomeView.swift in Sources */,
 				84AD00BB2C5BAA740037D9A3 /* HomeApiService.swift in Sources */,
+				843E31422C63D4FD007B0157 /* HomePresenter.swift in Sources */,
 				84AD00BF2C5BAA9D0037D9A3 /* SpritesModel.swift in Sources */,
 				84AD00AF2C5BA9F10037D9A3 /* BaseNavigationController.swift in Sources */,
 				84AD00922C5BA8F00037D9A3 /* SceneDelegate.swift in Sources */,
@@ -533,12 +543,14 @@
 				84AD00B32C5BAA180037D9A3 /* StorageProvider.swift in Sources */,
 				84AD00AB2C5BA9C70037D9A3 /* UIViewController+Extension.swift in Sources */,
 				84AD00D32C5BABEA0037D9A3 /* DetailViewController.swift in Sources */,
+				843E31462C63D518007B0157 /* DetailPresenter.swift in Sources */,
 				84AD00B92C5BAA630037D9A3 /* DetailApiService.swift in Sources */,
 				84AD00C92C5BAB430037D9A3 /* FavouriteViewCell.swift in Sources */,
 				84AD00BD2C5BAA870037D9A3 /* ModelEntityMapProtocol.swift in Sources */,
 				84AD00B12C5BAA040037D9A3 /* NetworkProvider.swift in Sources */,
 				84AD00AD2C5BA9E00037D9A3 /* Constant.swift in Sources */,
 				84AD00B52C5BAA370037D9A3 /* FavouriteStorageService.swift in Sources */,
+				843E31442C63D510007B0157 /* FavouritePresenter.swift in Sources */,
 				84AD00C72C5BAB2E0037D9A3 /* HomeViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
