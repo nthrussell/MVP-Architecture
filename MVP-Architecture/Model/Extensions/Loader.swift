@@ -7,12 +7,12 @@
 
 import SVProgressHUD
 
-extension UIViewController {
-    func showProgressSpinner() {
+class Loader {
+    static func show() {
         SVProgressHUD.show()
     }
     
-    func hideProgressSpinner() {
+    static func hide() {
         DispatchQueue.main.async {
             SVProgressHUD.dismiss()
         }

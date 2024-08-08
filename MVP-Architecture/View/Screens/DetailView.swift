@@ -58,7 +58,7 @@ class DetailView: UIView {
     }()
     
     var onTap: ((_ data:PokemonDetailModel) -> Void)?
-    var data: PokemonDetailModel?
+    var presenter: DetailPresenter!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -87,8 +87,6 @@ class DetailView: UIView {
             imageView.getImage(from: URL(string: url)!)
         }
         favouriteButton.isHidden = false
-        
-        self.data = data
     }
     
     func updateImage(image: UIImage) {
@@ -135,7 +133,7 @@ class DetailView: UIView {
     @objc
     func tapAction() {
         favouriteButton.isSelected.toggle()
-        if let data = self.data {
+        if let data = presenter.data {
             if let onTap = onTap {
                 onTap(data)
             }
