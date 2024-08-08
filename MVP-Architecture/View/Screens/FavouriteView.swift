@@ -18,8 +18,8 @@ class FavouriteView: UIView {
         return tableView
     }()
     
-    var detailData = [PokemonDetailModel]()
     var tapDelete: ((_ model: PokemonDetailModel) -> Void)?
+    var presenter: FavouritePresenter!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,7 +47,8 @@ class FavouriteView: UIView {
 
 extension FavouriteView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return detailData.count
+        guard let presenter = presenter else { return 0 }
+        return presenter.detailData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,7 +57,8 @@ extension FavouriteView: UITableViewDataSource {
             for: indexPath
         ) as! FavouriteViewCell
         
-        let data = detailData[indexPath.row]
+        guard let presenter = presenter else { return cell }
+        let data = presenter.detailData[indexPath.row]
         
         if let url = data.sprites.frontDefault, (url != "") {
             cell.cellImageView.getImage(from: URL(string: url)!)
@@ -74,7 +76,7 @@ extension FavouriteView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let data = detailData[indexPath.row]
+            let data = presenter.detailData[indexPath.row]
             if let tapDelete = tapDelete {
                 tapDelete(data)
             }

@@ -10,17 +10,7 @@ import CoreData
 
 class FavouriteViewController: UIViewController {
 
-    var favouriteView: FavouriteView!
-    private var favouriteStorageService: FavouriteStorageService
-    
-    init(favouriteStorageService: FavouriteStorageService = DefaultFavouriteStorageService()) {
-        self.favouriteStorageService = favouriteStorageService
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    var favouriteView = FavouriteView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,29 +26,21 @@ class FavouriteViewController: UIViewController {
     }
     
     override func loadView() {
-        favouriteView = FavouriteView()
         self.view = favouriteView
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        getAllFavourites()
-        deleteFavourite()
+        setupPresenter()
+    }
+    
+    private func setupPresenter() {
+        let presenter = FavouritePresenter(favouriteView: favouriteView)
+        favouriteView.presenter = presenter
     }
     
     @objc func didNewEntrySaved() {
-        getAllFavourites()
+        favouriteView.presenter.getAllFavourites()
     }
     
-    func getAllFavourites() {
-        let allData = favouriteStorageService.getAllFavourites()
-        favouriteView.detailData = allData
-        favouriteView.tableView.reloadData()
-    }
-    
-    func deleteFavourite() {
-        favouriteView.tapDelete = { [weak self] data in
-            guard let self = self else { return }
-            favouriteStorageService.delete(data: data)
-        }
-    }
+   
 }
