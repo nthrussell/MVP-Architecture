@@ -5,11 +5,11 @@
 //  Created by russel on 1/8/24.
 //
 
-import XCTest
-import Combine
-
-@testable import MVP_Architecture
-
+//import XCTest
+//import Combine
+//
+//@testable import MVP_Architecture
+//
 //class DetailViewControllerTest: XCTestCase {
 //    var cancellables = Set<AnyCancellable>()
 //    

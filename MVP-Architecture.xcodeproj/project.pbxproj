@@ -55,6 +55,7 @@
 		84AD00FF2C5BB06E0037D9A3 /* FavouriteViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD00FE2C5BB06D0037D9A3 /* FavouriteViewControllerTest.swift */; };
 		84AD01012C5BB08B0037D9A3 /* DetailViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD01002C5BB0890037D9A3 /* DetailViewControllerTest.swift */; };
 		84AD01032C5BB0AD0037D9A3 /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD01022C5BB0AC0037D9A3 /* HomeViewControllerTest.swift */; };
+		84AD1EBF2C66050F00247AAF /* DetailPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD1EBE2C66050C00247AAF /* DetailPresenterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		84AD00FE2C5BB06D0037D9A3 /* FavouriteViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewControllerTest.swift; sourceTree = "<group>"; };
 		84AD01002C5BB0890037D9A3 /* DetailViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTest.swift; sourceTree = "<group>"; };
 		84AD01022C5BB0AC0037D9A3 /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
+		84AD1EBE2C66050C00247AAF /* DetailPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				843CCE1B2C64B54900DC18AB /* HomePresenterTest.swift */,
+				84AD1EBE2C66050C00247AAF /* DetailPresenterTest.swift */,
 			);
 			path = PresenterTest;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				84AD00F52C5BAFE60037D9A3 /* DetailApiServiceTest.swift in Sources */,
 				84AD00F72C5BAFFE0037D9A3 /* HomeApiServiceTest.swift in Sources */,
 				84AD00ED2C5BAF5A0037D9A3 /* MockFavouriteStorageService.swift in Sources */,
+				84AD1EBF2C66050F00247AAF /* DetailPresenterTest.swift in Sources */,
 				84AD00F12C5BAFA70037D9A3 /* FavouriteStorageServiceTest.swift in Sources */,
 				84AD01012C5BB08B0037D9A3 /* DetailViewControllerTest.swift in Sources */,
 				84AD00EB2C5BAF430037D9A3 /* NetworkProviderStub.swift in Sources */,
