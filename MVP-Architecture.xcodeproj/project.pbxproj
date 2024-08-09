@@ -57,6 +57,7 @@
 		84AD01032C5BB0AD0037D9A3 /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD01022C5BB0AC0037D9A3 /* HomeViewControllerTest.swift */; };
 		84AD1EBF2C66050F00247AAF /* DetailPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD1EBE2C66050C00247AAF /* DetailPresenterTest.swift */; };
 		84AD1EC12C66079600247AAF /* FavouritePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD1EC02C66079300247AAF /* FavouritePresenterTest.swift */; };
+		84AD1EC32C660E0600247AAF /* DecodedPokemonListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD1EC22C660DFE00247AAF /* DecodedPokemonListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		84AD01022C5BB0AC0037D9A3 /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
 		84AD1EBE2C66050C00247AAF /* DetailPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTest.swift; sourceTree = "<group>"; };
 		84AD1EC02C66079300247AAF /* FavouritePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePresenterTest.swift; sourceTree = "<group>"; };
+		84AD1EC22C660DFE00247AAF /* DecodedPokemonListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodedPokemonListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -333,28 +335,20 @@
 				84AD00E12C5BAEA60037D9A3 /* Mocks */,
 				84AD00E02C5BAEA20037D9A3 /* ModelTest */,
 				84AD00DF2C5BAE9F0037D9A3 /* ViewTest */,
-				84AD00DE2C5BAE9B0037D9A3 /* ControllerTest */,
 				843CCE1A2C64B52300DC18AB /* PresenterTest */,
 			);
 			path = "MVP-ArchitectureTests";
-			sourceTree = "<group>";
-		};
-		84AD00DE2C5BAE9B0037D9A3 /* ControllerTest */ = {
-			isa = PBXGroup;
-			children = (
-				84AD01022C5BB0AC0037D9A3 /* HomeViewControllerTest.swift */,
-				84AD01002C5BB0890037D9A3 /* DetailViewControllerTest.swift */,
-				84AD00FE2C5BB06D0037D9A3 /* FavouriteViewControllerTest.swift */,
-			);
-			path = ControllerTest;
 			sourceTree = "<group>";
 		};
 		84AD00DF2C5BAE9F0037D9A3 /* ViewTest */ = {
 			isa = PBXGroup;
 			children = (
 				84AD00FC2C5BB04A0037D9A3 /* HomeViewTest.swift */,
+				84AD01022C5BB0AC0037D9A3 /* HomeViewControllerTest.swift */,
 				84AD00FA2C5BB0330037D9A3 /* DetailViewTest.swift */,
+				84AD01002C5BB0890037D9A3 /* DetailViewControllerTest.swift */,
 				84AD00F82C5BB0190037D9A3 /* FavouriteViewTest.swift */,
+				84AD00FE2C5BB06D0037D9A3 /* FavouriteViewControllerTest.swift */,
 			);
 			path = ViewTest;
 			sourceTree = "<group>";
@@ -392,6 +386,7 @@
 		84AD00E32C5BAEAE0037D9A3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				84AD1EC22C660DFE00247AAF /* DecodedPokemonListModel.swift */,
 				84AD00E42C5BAEEA0037D9A3 /* StorageProvider+Extension.swift */,
 			);
 			path = Helpers;
@@ -590,6 +585,7 @@
 				84AD00ED2C5BAF5A0037D9A3 /* MockFavouriteStorageService.swift in Sources */,
 				84AD1EBF2C66050F00247AAF /* DetailPresenterTest.swift in Sources */,
 				84AD00F12C5BAFA70037D9A3 /* FavouriteStorageServiceTest.swift in Sources */,
+				84AD1EC32C660E0600247AAF /* DecodedPokemonListModel.swift in Sources */,
 				84AD01012C5BB08B0037D9A3 /* DetailViewControllerTest.swift in Sources */,
 				84AD00EB2C5BAF430037D9A3 /* NetworkProviderStub.swift in Sources */,
 				84AD00E72C5BAF0D0037D9A3 /* DetailApiServiceStub.swift in Sources */,
