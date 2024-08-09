@@ -14,7 +14,7 @@ struct PokemonListModel: Codable {
     let results: [PokemonList]
 }
 
-struct PokemonList: Codable {
+struct PokemonList: Codable, Equatable {
     let name: String
     let url: String
 }

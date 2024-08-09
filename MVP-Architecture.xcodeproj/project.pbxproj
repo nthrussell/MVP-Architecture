@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843CCE1C2C64B55000DC18AB /* HomePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CCE1B2C64B54900DC18AB /* HomePresenterTest.swift */; };
 		843E31422C63D4FD007B0157 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E31412C63D4FA007B0157 /* HomePresenter.swift */; };
 		843E31442C63D510007B0157 /* FavouritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E31432C63D509007B0157 /* FavouritePresenter.swift */; };
 		843E31462C63D518007B0157 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E31452C63D514007B0157 /* DetailPresenter.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		843CCE1B2C64B54900DC18AB /* HomePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTest.swift; sourceTree = "<group>"; };
 		843E31412C63D4FA007B0157 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		843E31432C63D509007B0157 /* FavouritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePresenter.swift; sourceTree = "<group>"; };
 		843E31452C63D514007B0157 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
@@ -156,6 +158,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843CCE1A2C64B52300DC18AB /* PresenterTest */ = {
+			isa = PBXGroup;
+			children = (
+				843CCE1B2C64B54900DC18AB /* HomePresenterTest.swift */,
+			);
+			path = PresenterTest;
+			sourceTree = "<group>";
+		};
 		84AD004D2C5BA8160037D9A3 = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +328,7 @@
 				84AD00E02C5BAEA20037D9A3 /* ModelTest */,
 				84AD00DF2C5BAE9F0037D9A3 /* ViewTest */,
 				84AD00DE2C5BAE9B0037D9A3 /* ControllerTest */,
+				843CCE1A2C64B52300DC18AB /* PresenterTest */,
 			);
 			path = "MVP-ArchitectureTests";
 			sourceTree = "<group>";
@@ -566,6 +577,7 @@
 				84AD01032C5BB0AD0037D9A3 /* HomeViewControllerTest.swift in Sources */,
 				84AD00EF2C5BAF780037D9A3 /* MockDetailStorageService.swift in Sources */,
 				84AD00FF2C5BB06E0037D9A3 /* FavouriteViewControllerTest.swift in Sources */,
+				843CCE1C2C64B55000DC18AB /* HomePresenterTest.swift in Sources */,
 				84AD00F52C5BAFE60037D9A3 /* DetailApiServiceTest.swift in Sources */,
 				84AD00F72C5BAFFE0037D9A3 /* HomeApiServiceTest.swift in Sources */,
 				84AD00ED2C5BAF5A0037D9A3 /* MockFavouriteStorageService.swift in Sources */,
