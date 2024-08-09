@@ -1,14 +1,14 @@
+////
+////  FavouriteViewControllerTest.swift
+////  MVP-Architecture
+////
+////  Created by russel on 1/8/24.
+////
 //
-//  FavouriteViewControllerTest.swift
-//  MVP-Architecture
+//import XCTest
 //
-//  Created by russel on 1/8/24.
+//@testable import MVP_Architecture
 //
-
-import XCTest
-
-@testable import MVP_Architecture
-
 //class FavouriteViewControllerTest: XCTestCase {
 //    
 //    var sut: FavouriteViewController!
