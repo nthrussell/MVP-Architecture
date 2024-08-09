@@ -41,6 +41,4 @@ class FavouriteViewController: UIViewController {
     @objc func didNewEntrySaved() {
         favouriteView.presenter.getAllFavourites()
     }
-    
-   
 }
