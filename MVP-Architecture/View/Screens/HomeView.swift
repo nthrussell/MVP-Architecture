@@ -90,12 +90,7 @@ extension HomeView: UITableViewDataSource {
         let data = presenter.rowAt(indexPath: indexPath)
         cell.nameLabel.text = data.name
         
-        if (indexPath.row == presenter.pokemonList.count - 1) && (!presenter.isFiltering){
-            tableView.tableFooterView = activityindicatorView
-            activityindicatorView.startAnimating()
-            presenter.fetchMoreData()
-        }
-        
+        presenter.pagination(with: indexPath)
         if presenter.isFiltering { activityindicatorView.stopAnimating() }
         
         return cell

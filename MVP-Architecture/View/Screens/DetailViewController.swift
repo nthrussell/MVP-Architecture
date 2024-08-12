@@ -24,15 +24,12 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupPresenter()
         Loader.show()
     }
     
     override func loadView() {
         self.view = detailView
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        setupPresenter()
     }
     
     override func viewDidDisappear(_ animated: Bool) {

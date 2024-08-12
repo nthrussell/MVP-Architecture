@@ -47,6 +47,14 @@ class HomePresenter {
         callApi()
     }
     
+    func numberOfRowsInSection() -> Int {
+        if isFiltering {
+            return filteredData.count
+        } else {
+            return pokemonList.count
+        }
+    }
+    
     func rowAt(indexPath: IndexPath) -> PokemonList {
         var data: PokemonList
         
@@ -59,11 +67,11 @@ class HomePresenter {
         return data
     }
     
-    func numberOfRowsInSection() -> Int {
-        if isFiltering {
-            return filteredData.count
-        } else {
-            return pokemonList.count
+    func pagination(with indexPath: IndexPath) {
+        if (indexPath.row == pokemonList.count - 1) && (!isFiltering){
+            homeView.tableView.tableFooterView = homeView.activityindicatorView
+            homeView.activityindicatorView.startAnimating()
+            fetchMoreData()
         }
     }
     
